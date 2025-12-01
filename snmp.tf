@@ -1,5 +1,4 @@
-resource "iosxe_snmp_server" "scopuupessnmp" {
-  chassis_id                       = "R1"
+resource "iosxe_snmp_server" "scopuupessnmp" 
   contact                          = "sysnoc@socpuppets.com"
   location                         = "var.loc"
   enable_traps                     = true
@@ -10,10 +9,9 @@ resource "iosxe_snmp_server" "scopuupessnmp" {
   enable_traps_snmp_warmstart      = true
   hosts = [
     {
-      ip_address        = "11.1.1.1"
-      community_or_user = "08116C5D1A0E550518"
+      ip_address        = "10.99.99.200"
+      community_or_user = "alertnocnms01"
       version           = "2c"
-      encryption        = "7"
     }
   ]
   system_shutdown                           = true
