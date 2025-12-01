@@ -22,12 +22,13 @@ resource "iosxe_vlan" "CAMERAS" {
   shutdown = false
 }
 
+# DMZ are in vlan-id 201-299 range
+
 resource "iosxe_vlan" "DMZ01" {
   vlan_id = 201
   name    = "DMZ01"
   shutdown = false
 }
-
 
 resource "iosxe_vlan" "DMZ02" {
   vlan_id = 202
